@@ -30,7 +30,7 @@ public class EnemyMovement : MonoBehaviour
         }
         else if (enemyState == EnemyState.Attacking)
         {
-            
+            rb.linearVelocity = Vector2.zero;
         }
     }
 
