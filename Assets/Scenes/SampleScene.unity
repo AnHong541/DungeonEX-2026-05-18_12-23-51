@@ -4480,7 +4480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   speed: 0
-  attackRange: 2
+  attackRange: 5
 --- !u!50 &967726312
 Rigidbody2D:
   serializedVersion: 5
@@ -4542,8 +4542,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.036190987, y: -0.90029573}
-  m_Radius: 3.0299926
+  m_Offset: {x: -2.3123446, y: -0.9002938}
+  m_Radius: 5.3785324
 --- !u!212 &967726314
 SpriteRenderer:
   serializedVersion: 2
