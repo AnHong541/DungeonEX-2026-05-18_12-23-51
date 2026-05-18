@@ -716,11 +716,11 @@ PlayerSettings:
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
   enableDirectStorage: 0
-  cloudProjectId: 269e49d7-58cf-4dcd-9ab0-8158ce2f5495
+  cloudProjectId: d2fbf906-5db3-4c24-9740-cb28b895b21a
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: DungeonEX
-  organizationId: unity_17f34ce78f00f5c6cace
+  organizationId: 5thangchaygo
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
