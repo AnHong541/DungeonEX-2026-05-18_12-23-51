@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5050845491494003270}
   - component: {fileID: 3979868434702863395}
   m_Layer: 0
-  m_Name: Potion (small)
+  m_Name: Loot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8281d506934f3343971069fbccd4d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Loot
-  itemSO: {fileID: 11400000, guid: 5c2d97a6197c4cb45b2b35e83ee8929d, type: 2}
+  itemSO: {fileID: 0}
   sr: {fileID: 5028186135480235622}
   anim: {fileID: 3591671545525210440}
   quantity: 2
