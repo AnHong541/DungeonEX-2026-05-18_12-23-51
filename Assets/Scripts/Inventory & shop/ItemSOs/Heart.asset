@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b36640ef79ad0b640b91518de6630338, type: 3}
   m_Name: Heart
   m_EditorClassIdentifier: Assembly-CSharp::ItemS0
-  itemName: Potion (small)
-  itemDescription: better than nothing
-  icon: {fileID: 1615732897503146058, guid: ef872e122ff9e354cae3e602b3ed41f8, type: 3}
+  itemName: Heart
+  itemDescription: Live longer
+  icon: {fileID: -1358923746260348066, guid: d5e23706ef666aa42b605abd44333247, type: 3}
   isGold: 0
   currentHealth: 0
-  maxHealth: 0
+  maxHealth: 5
   damage: 0
   duration: 0
