@@ -5,7 +5,7 @@ using TMPro;
 
 
 [CreateAssetMenu(fileName = "new item")]
-public class ItemS0 : ScriptableObject
+public class ItemSO : ScriptableObject
 { 
     public string itemName;
     [TextArea] public string itemDescription;

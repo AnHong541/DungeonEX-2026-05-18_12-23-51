@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Loot : MonoBehaviour
 {
-    public ItemS0 itemS0;
+    public ItemSO itemSO;
     public SpriteRenderer sr;
     public Animator anim;
 
@@ -12,10 +12,19 @@ public class Loot : MonoBehaviour
 
     private void OnValidate()
     {
-        if (itemS0 = null)
+        if (itemSO == null)
             return;
 
-        sr.sprite = itemS0.icon;
-        this.name = itemS0.itemName;
+        sr.sprite = itemSO.icon;
+        this.name = itemSO.itemName;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            anim.Play("pickup");
+            Destroy(gameObject, 0.5f);
+        }
     }
 }
