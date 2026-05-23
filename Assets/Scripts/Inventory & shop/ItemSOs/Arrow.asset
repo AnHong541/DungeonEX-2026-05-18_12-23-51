@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b36640ef79ad0b640b91518de6630338, type: 3}
-  m_Name: Potion (small)
+  m_Name: Arrow
   m_EditorClassIdentifier: Assembly-CSharp::ItemS0
-  itemName: Potion (small)
-  itemDescription: better than nothing
-  icon: {fileID: 1615732897503146058, guid: ef872e122ff9e354cae3e602b3ed41f8, type: 3}
+  itemName: Arrow
+  itemDescription: quick and accuracy
+  icon: {fileID: 2367449957533476818, guid: a0b2f4643d72a3649b261d45d616c4db, type: 3}
   isGold: 0
   currentHealth: 0
   maxHealth: 0

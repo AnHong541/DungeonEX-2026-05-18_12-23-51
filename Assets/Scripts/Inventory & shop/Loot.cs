@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class Loot : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Loot : MonoBehaviour
     public Animator anim;
 
     public int quantity;
+    public static event Action<ItemSO, int> OnitemPickup;
 
     private void OnValidate()
     {
@@ -24,6 +26,7 @@ public class Loot : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             anim.Play("pickup");
+            OnitemPickup?.Invoke(itemSO, quantity);
             Destroy(gameObject, 0.5f);
         }
     }
