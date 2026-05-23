@@ -91,8 +91,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: 0.03163445, y: 0.0017573833}
+  m_Radius: 0.22759259
 --- !u!114 &3979868434702863395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 5028186135480235622}
   - component: {fileID: 5642548045021997821}
   m_Layer: 0
-  m_Name: Potion (small)
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
