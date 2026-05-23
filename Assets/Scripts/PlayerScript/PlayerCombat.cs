@@ -33,7 +33,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void Dealdamge()
     {
-        Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, StatManager.Instance.weaponRange, enemyLayer);
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, StatManager.Instance.WeaponRange, enemyLayer);
 
         foreach(Collider2D enemy in enemies)
         {
@@ -42,13 +42,13 @@ public class PlayerCombat : MonoBehaviour
             EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
-                enemyHealth.ChangeHealth(-StatManager.Instance.damage);
+                enemyHealth.ChangeHealth(-StatManager.Instance.Damage);
                 
             }
             EnemyKnockback enemyKnockback = enemy.GetComponent<EnemyKnockback>();
             if (enemyKnockback != null)
             {
-                enemyKnockback.Knockback(StatManager.Instance.transform, StatManager.Instance.knockbackForce, StatManager.Instance.knockbackTime, StatManager.Instance.stunTime);
+                enemyKnockback.Knockback(StatManager.Instance.transform, StatManager.Instance.KnockbackForce, StatManager.Instance.KnockbackTime, StatManager.Instance.StunTime);
             }
         }
     }
@@ -60,7 +60,9 @@ public class PlayerCombat : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        if (attackPoint == null || StatManager.Instance == null)
+            return;
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPoint.position, StatManager.Instance.weaponRange);
+        Gizmos.DrawWireSphere(attackPoint.position, StatManager.Instance.WeaponRange);
     }
 }

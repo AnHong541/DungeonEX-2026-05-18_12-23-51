@@ -1,53 +1,155 @@
-using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
 using TMPro;
+using UnityEngine;
 
 public class StatManager : MonoBehaviour
 {
-    public static StatManager Instance;
-    public TMP_Text healthText;
-    public TMP_Text damageText;
-    public TMP_Text speedText;
+    public static StatManager Instance { get; private set; }
+
+    [SerializeField] private TMP_Text healthText;
+    [SerializeField] private TMP_Text damageText;
+    [SerializeField] private TMP_Text speedText;
 
     [Header("Player Stats")]
-    public int damage;
-    public float weaponRange;
-    public float knockbackForce;
-    public float knockbackTime;
-    public float stunTime;
+    [SerializeField] private int damage;
+    [SerializeField] private float weaponRange;
+    [SerializeField] private float knockbackForce;
+    [SerializeField] private float knockbackTime;
+    [SerializeField] private float stunTime;
 
     [Header("Movement Stats")]
-    public int speed;
-    public float dashSpeed;
-    public float dashDuration;
-    public float dashCooldown;
+    [SerializeField] private int speed;
+    [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashDuration;
+    [SerializeField] private float dashCooldown;
 
     [Header("Health Stats")]
-    public int maxHealth;
-    public int currentHealth;
+    [SerializeField] private int maxHealth;
+    [SerializeField] private int currentHealth;
+
+    // Min/Max constraints
+    private const int MIN_DAMAGE = 1;
+    private const int MAX_DAMAGE = 999;
+    private const int MIN_SPEED = 1;
+    private const int MAX_SPEED = 50;
+    private const int MIN_HEALTH = 1;
+    private const int MAX_HEALTH = 9999;
+
+    public int Damage => damage;
+    public float WeaponRange => weaponRange;
+    public float KnockbackForce => knockbackForce;
+    public float KnockbackTime => knockbackTime;
+    public float StunTime => stunTime;
+    public int Speed => speed;
+    public float DashSpeed => dashSpeed;
+    public float DashDuration => dashDuration;
+    public float DashCooldown => dashCooldown;
+    public int MaxHealth => maxHealth;
+    public int CurrentHealth => currentHealth;
 
     private void Awake()
     {
         if (Instance == null)
+        {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         else
+        {
             Destroy(gameObject);
+        }
     }
 
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
+    }
     public void UpdateMaxHealth(int amount)
     {
-        maxHealth += amount;
-        healthText.text = $"HP: {currentHealth} / {maxHealth}";
+        if (amount == 0) return;
+
+        int newMaxHealth = maxHealth + amount;
+        maxHealth = Mathf.Clamp(newMaxHealth, MIN_HEALTH, MAX_HEALTH);
+
+ 
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+
+        UpdateHealthDisplay();
     }
+
     public void UpdateDamage(int amount)
     {
-        damage += amount;
-        damageText.text = $"Damage: {damage}";
+        if (amount == 0) return;
+
+        int newDamage = damage + amount;
+        damage = Mathf.Clamp(newDamage, MIN_DAMAGE, MAX_DAMAGE);
+        UpdateDamageDisplay();
     }
+
     public void UpdateSpeed(int amount)
     {
-        speed += amount;
-        speedText.text = $"Speed: {speed}";
+        if (amount == 0) return;
+
+        int newSpeed = speed + amount;
+        speed = Mathf.Clamp(newSpeed, MIN_SPEED, MAX_SPEED);
+        UpdateSpeedDisplay();
+    }
+
+    public void ChangeHealth(int amount)
+    {
+        if (amount == 0) return;
+
+        int newHealth = currentHealth + amount;
+        currentHealth = Mathf.Clamp(newHealth, 0, maxHealth);
+        UpdateHealthDisplay();
+
+        if (currentHealth <= 0)
+        {
+            Debug.Log("Player died!");
+            
+        }
+    }
+
+    public void ResetStats()
+    {
+        damage = 10;
+        speed = 5;
+        maxHealth = 100;
+        currentHealth = 100;
+
+        UpdateHealthDisplay();
+        UpdateDamageDisplay();
+        UpdateSpeedDisplay();
+    }
+
+    private void UpdateHealthDisplay()
+    {
+        if (healthText != null)
+        {
+            healthText.text = $"HP: {currentHealth} / {maxHealth}";
+        }
+    }
+
+    private void UpdateDamageDisplay()
+    {
+        if (damageText != null)
+        {
+            damageText.text = $"Damage: {damage}";
+        }
+    }
+
+    private void UpdateSpeedDisplay()
+    {
+        if (speedText != null)
+        {
+            speedText.text = $"Speed: {speed}";
+        }
     }
 }

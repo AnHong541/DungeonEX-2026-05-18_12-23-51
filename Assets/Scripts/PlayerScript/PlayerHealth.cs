@@ -10,17 +10,17 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        healthText.text = "HP: " + StatManager.Instance.currentHealth + " / " + StatManager.Instance.maxHealth;
+        healthText.text = "HP: " + StatManager.Instance.CurrentHealth + " / " + StatManager.Instance.MaxHealth;
     }
 
     public void changeHealth(int ammount) 
     {
-        StatManager.Instance.currentHealth += ammount;
+        StatManager.Instance.ChangeHealth(ammount);
         healthTextAnim.Play("HPupdate");
 
-        healthText.text = "HP: " + StatManager.Instance.currentHealth + " / " + StatManager.Instance.maxHealth;
+        healthText.text = "HP: " + StatManager.Instance.CurrentHealth + " / " + StatManager.Instance.MaxHealth;
 
-        if (StatManager.Instance.currentHealth <= 0)
+        if (StatManager.Instance.CurrentHealth <= 0)
         {
             gameObject.SetActive(false);
         }

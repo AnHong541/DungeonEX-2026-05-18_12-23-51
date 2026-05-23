@@ -35,15 +35,15 @@ public class StatsUI : MonoBehaviour
 
     public void UpdateDamage()
     {
-        statsSlots[0].GetComponentInChildren<TMP_Text>().text  = "Damage: " + StatManager.Instance.damage;
+        statsSlots[0].GetComponentInChildren<TMP_Text>().text  = "Damage: " + StatManager.Instance.Damage;
     }
     public void UpdateHealth()
     {
-        statsSlots[1].GetComponentInChildren<TMP_Text>().text = "Health: " + StatManager.Instance.maxHealth;
+        statsSlots[1].GetComponentInChildren<TMP_Text>().text = "Health: " + StatManager.Instance.MaxHealth;
     }
     public void UpdateSpeed()
     {
-        statsSlots[2].GetComponentInChildren<TMP_Text>().text = "Speed: " + StatManager.Instance.speed;
+        statsSlots[2].GetComponentInChildren<TMP_Text>().text = "Speed: " + StatManager.Instance.Speed;
     }
 
     public void UpdateAllStats()

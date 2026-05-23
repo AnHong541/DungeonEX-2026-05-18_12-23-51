@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetFloat("horizontal", Mathf.Abs(horizontal));
             anim.SetFloat("vertical", Mathf.Abs(vertical));
 
-            rb.linearVelocity = new Vector2(horizontal, vertical) * StatManager.Instance.speed;
+            rb.linearVelocity = new Vector2(horizontal, vertical) * StatManager.Instance.Speed;
         }
     }
 
@@ -95,14 +95,14 @@ public class PlayerMovement : MonoBehaviour
             dashDirection = new Vector2(horizontal, vertical).normalized;
         }
 
-        rb.linearVelocity = dashDirection * StatManager.Instance.dashSpeed;
+        rb.linearVelocity = dashDirection * StatManager.Instance.DashSpeed;
 
-        yield return new WaitForSeconds(StatManager.Instance.dashDuration);
+        yield return new WaitForSeconds(StatManager.Instance.DashDuration);
 
         rb.linearVelocity = Vector2.zero;
         isDashing = false;
 
-        dashCooldownTimer = StatManager.Instance.dashCooldown;
+        dashCooldownTimer = StatManager.Instance.DashCooldown;
     }
 
     public void SetIsAttacking(bool attacking)

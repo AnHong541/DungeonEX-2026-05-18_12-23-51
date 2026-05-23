@@ -28,9 +28,9 @@ public class PlayerBow : MonoBehaviour
 
     private IEnumerator ShootCoroutine()
     {
-        yield return new WaitForSeconds(shootTimer); 
+        yield return new WaitForSeconds(shootTimer);
         Shoot();
-        anim.SetBool("isShooting", false); 
+        anim.SetBool("isShooting", false);
     }
     private void HandleAiming()
     {
