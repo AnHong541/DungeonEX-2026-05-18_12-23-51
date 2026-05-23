@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b36640ef79ad0b640b91518de6630338, type: 3}
-  m_Name: Potion (small)
+  m_Name: gold
   m_EditorClassIdentifier: Assembly-CSharp::ItemS0
-  itemName: Potion (small)
-  itemDescription: better than nothing
-  icon: {fileID: 1615732897503146058, guid: ef872e122ff9e354cae3e602b3ed41f8, type: 3}
-  isGold: 0
+  itemName: gold
+  itemDescription: Shiny
+  icon: {fileID: -1612863220846769981, guid: d5e23706ef666aa42b605abd44333247, type: 3}
+  isGold: 1
   currentHealth: 0
   maxHealth: 0
   damage: 0
