@@ -2,14 +2,20 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.XR;
+using UnityEngine.Rendering.VirtualTexturing;
 
 public class EnemyMovement : MonoBehaviour
 {
+    public float attackRange = 2;
     public float speed;
+    public float attackCooldown = 2;
+    public float playerDetectionRange = 5;
+    public Transform dectectionPoint;
+    public LayerMask playerLayer;
+
+    private float attacktimer;
     private int facingDirec = -1;
     private EnemyState enemyState, newState;
-    
-    public float attackRange = 2;
 
     private Rigidbody2D rb;
     private Transform player;
@@ -24,25 +30,31 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        if (enemyState == EnemyState.Chasing)
+        if (enemyState != EnemyState.Knockback)
         {
-            Chase();
-        }
-        else if (enemyState == EnemyState.Attacking)
-        {
-            rb.linearVelocity = Vector2.zero;
+
+            CheckForPlayer();
+            if (attacktimer > 0)
+            {
+                attacktimer -= Time.deltaTime;
+            }
+
+            if (enemyState == EnemyState.Chasing)
+            {
+                Chase();
+            }
+
+            else if (enemyState == EnemyState.Attacking)
+            {
+                rb.linearVelocity = Vector2.zero;
+            }
         }
     }
 
     void Chase()
     {
-        if(Vector2.Distance(transform.position, player.transform.position) <= attackRange)
-        {
-            ChangeState(EnemyState.Attacking);
-        }
-
-        else if (player.position.x > transform.position.x && facingDirec == -1 ||
-                player.position.x < transform.position.x && facingDirec == 1)
+        if (player.position.x > transform.position.x && facingDirec == -1 ||
+            player.position.x < transform.position.x && facingDirec == 1)
         {
             Flip();
         }
@@ -57,28 +69,31 @@ public class EnemyMovement : MonoBehaviour
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void CheckForPlayer()
     {
-        if (collision.gameObject.tag == "Player")
+        Collider2D[] hits = Physics2D.OverlapCircleAll(dectectionPoint.position, playerDetectionRange, playerLayer);
+        if (hits.Length > 0)
         {
-            if (player == null)
-            {
-                player = collision.transform;
-            }
-            ChangeState(EnemyState.Chasing);
-        }
-    }
+            player = hits[0].transform;
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
+            if (Vector2.Distance(transform.position, player.transform.position) <= attackRange && attacktimer <= 0)
+            {
+                attacktimer = attackCooldown;
+                ChangeState(EnemyState.Attacking);
+            }
+            else if (Vector2.Distance(transform.position, player.position) > attackRange && enemyState != EnemyState.Attacking)
+            {
+                ChangeState(EnemyState.Chasing);
+            }
+        }
+        else 
         {
             rb.linearVelocity = Vector2.zero;
             ChangeState(EnemyState.Idle);
         }
     }
 
-    void ChangeState(EnemyState newState)
+    public void ChangeState(EnemyState newState)
     {
         // Exit current state
         if (enemyState == EnemyState.Idle)
@@ -87,6 +102,8 @@ public class EnemyMovement : MonoBehaviour
             anim.SetBool("isChasing", false);
         else if (enemyState == EnemyState.Attacking)
             anim.SetBool("isAttacking", false);
+        else if (enemyState == EnemyState.Knockback)
+            anim.SetBool("isKnockedback", false);
 
         //Update current state
         enemyState = newState;
@@ -98,6 +115,8 @@ public class EnemyMovement : MonoBehaviour
             anim.SetBool("isChasing", true);
         else if (enemyState == EnemyState.Attacking)
             anim.SetBool("isAttacking", true);
+        else if (enemyState == EnemyState.Knockback)
+            anim.SetBool("isKnockedback", true);
     }   
 }
 
@@ -106,4 +125,5 @@ public enum EnemyState
     Idle,
     Chasing,
     Attacking,
+    Knockback,
 }

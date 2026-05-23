@@ -5,16 +5,22 @@ using System.Collections.Generic;
 public class EnemiesCombat : MonoBehaviour 
 {
     public int damage = 1;
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            collision.gameObject.GetComponent<PlayerHealth>().changeHealth(damage);
-        }
-    }
+    public Transform attackpoint;
+    public float weaponRange;
+    public LayerMask playerLayer;
+    public float knockbackForce;
+    public float stunTime;
+    public Animator anim;
 
     public void Attack()
     {
-        Debug.Log("Attacking");
+        Collider2D[] hits = Physics2D.OverlapCircleAll(attackpoint.position, weaponRange, playerLayer);
+
+        if (hits.Length > 0)
+        {
+            
+            hits[0].GetComponent<PlayerHealth>().changeHealth(-damage);
+            hits[0].GetComponent<PlayerMovement>().Knockback(transform, knockbackForce, stunTime);
+        }
     }
 }
