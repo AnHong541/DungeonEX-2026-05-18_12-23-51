@@ -11,6 +11,7 @@ public class StatManager : MonoBehaviour
     [SerializeField] private TMP_Text damageText;
     [SerializeField] private TMP_Text speedText;
 
+
     [Header("Player Stats")]
     [SerializeField] private int damage;
     [SerializeField] private float weaponRange;
@@ -48,6 +49,8 @@ public class StatManager : MonoBehaviour
     public int MaxHealth => maxHealth;
     public int CurrentHealth => currentHealth;
 
+    private StatsUI statsUI;
+
     private void Awake()
     {
         if (Instance == null)
@@ -61,6 +64,11 @@ public class StatManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        statsUI = FindAnyObjectByType<StatsUI>();
+    }
+
     private void OnDestroy()
     {
         if (Instance == this)
@@ -68,44 +76,49 @@ public class StatManager : MonoBehaviour
             Instance = null;
         }
     }
+
+  
+    private void SyncStatsUI()
+    {
+        if (statsUI == null)
+            statsUI = FindAnyObjectByType<StatsUI>();
+        statsUI?.UpdateAllStats();
+    }
+
     public void UpdateMaxHealth(int amount)
     {
         if (amount == 0) return;
-
         int newMaxHealth = maxHealth + amount;
         maxHealth = Mathf.Clamp(newMaxHealth, MIN_HEALTH, MAX_HEALTH);
 
- 
         if (currentHealth > maxHealth)
-        {
             currentHealth = maxHealth;
-        }
 
         UpdateHealthDisplay();
+        SyncStatsUI();
     }
 
     public void UpdateDamage(int amount)
     {
         if (amount == 0) return;
-
         int newDamage = damage + amount;
         damage = Mathf.Clamp(newDamage, MIN_DAMAGE, MAX_DAMAGE);
         UpdateDamageDisplay();
+        SyncStatsUI();
     }
 
     public void UpdateSpeed(int amount)
     {
         if (amount == 0) return;
-
         int newSpeed = speed + amount;
         speed = Mathf.Clamp(newSpeed, MIN_SPEED, MAX_SPEED);
         UpdateSpeedDisplay();
+        SyncStatsUI();
     }
 
     public void ChangeHealth(int amount)
     {
         if (amount == 0) return;
-
         int newHealth = currentHealth + amount;
         currentHealth = Mathf.Clamp(newHealth, 0, maxHealth);
         UpdateHealthDisplay();
@@ -117,33 +130,27 @@ public class StatManager : MonoBehaviour
         speed = 5;
         maxHealth = 100;
         currentHealth = 100;
-
         UpdateHealthDisplay();
         UpdateDamageDisplay();
         UpdateSpeedDisplay();
+        SyncStatsUI();
     }
 
     private void UpdateHealthDisplay()
     {
         if (healthText != null)
-        {
             healthText.text = $"HP: {currentHealth} / {maxHealth}";
-        }
     }
 
     private void UpdateDamageDisplay()
     {
         if (damageText != null)
-        {
             damageText.text = $"Damage: {damage}";
-        }
     }
 
     private void UpdateSpeedDisplay()
     {
         if (speedText != null)
-        {
             speedText.text = $"Speed: {speed}";
-        }
     }
 }

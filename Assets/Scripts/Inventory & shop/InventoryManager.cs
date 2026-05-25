@@ -8,6 +8,7 @@ using TMPro;
 public class InventoryManager : MonoBehaviour
 {
     public InventorySlot[] itemSlots;
+    public UseItem useItem;
     public int gold;
     public TMP_Text goldText;
     public int arrow;
@@ -67,11 +68,12 @@ public class InventoryManager : MonoBehaviour
     {
         if (itemSlot.itemSO != null && itemSlot.quantity > 0)
         {
+            useItem.ApplyItemEffect(itemSlot.itemSO);
+
             itemSlot.quantity--;
             if (itemSlot.quantity <= 0)
             {
                 itemSlot.itemSO = null;
-                itemSlot.quantity = 0;
             }
             itemSlot.UpdateUI();
         }

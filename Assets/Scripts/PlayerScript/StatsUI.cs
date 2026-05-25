@@ -23,12 +23,14 @@ public class StatsUI : MonoBehaviour
             {
                 Time.timeScale = 1;
                 StatsCanvas.alpha = 0;
+                StatsCanvas.blocksRaycasts = false;
                 statsOpen = false;
             }
             else
             {
                 Time.timeScale = 0;
                 StatsCanvas.alpha = 1;
+                StatsCanvas.blocksRaycasts = true;
                 statsOpen = true;
             }
     }
@@ -39,7 +41,7 @@ public class StatsUI : MonoBehaviour
     }
     public void UpdateHealth()
     {
-        statsSlots[1].GetComponentInChildren<TMP_Text>().text = "Health: " + StatManager.Instance.MaxHealth;
+        statsSlots[1].GetComponentInChildren<TMP_Text>().text = "Max Health: " + StatManager.Instance.MaxHealth;
     }
     public void UpdateSpeed()
     {
