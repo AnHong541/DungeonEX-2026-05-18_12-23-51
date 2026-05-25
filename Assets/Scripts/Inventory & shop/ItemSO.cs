@@ -12,6 +12,7 @@ public class ItemSO : ScriptableObject
     public Sprite icon;
 
     public bool isGold;
+    public bool isArrow;
 
     [Header("Stats")]
     public int currentHealth;

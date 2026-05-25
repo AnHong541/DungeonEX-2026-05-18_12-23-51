@@ -10,6 +10,8 @@ public class InventoryManager : MonoBehaviour
     public InventorySlot[] itemSlots;
     public int gold;
     public TMP_Text goldText;
+    public int arrow;
+    public TMP_Text arrowText;
 
 
     private void Start()
@@ -18,6 +20,8 @@ public class InventoryManager : MonoBehaviour
         {
             slot.UpdateUI();
         }
+        goldText.text = gold.ToString();
+        arrowText.text = arrow.ToString();
     }
 
     private void OnEnable()
@@ -32,10 +36,16 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItem(ItemSO itemSO, int quantity)
     {
-        if(itemSO.isGold)
+        if (itemSO.isGold)
         {
             gold += quantity;
             goldText.text = gold.ToString();
+            return;
+        }
+        else if (itemSO.isArrow)
+        {
+            arrow += quantity;
+            arrowText.text = arrow.ToString();
             return;
         }
         else

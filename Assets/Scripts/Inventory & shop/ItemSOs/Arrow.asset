@@ -16,6 +16,7 @@ MonoBehaviour:
   itemDescription: quick and accuracy
   icon: {fileID: 2367449957533476818, guid: a0b2f4643d72a3649b261d45d616c4db, type: 3}
   isGold: 0
+  isArrow: 1
   currentHealth: 0
   maxHealth: 0
   damage: 0
