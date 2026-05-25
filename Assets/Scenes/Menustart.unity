@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d56d279925d8e45a571ae5658d8d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::changeRoom
-  senceToLoad: Game
+  senceToLoad: Lang
 --- !u!114 &359622058
 MonoBehaviour:
   m_ObjectHideFlags: 0
