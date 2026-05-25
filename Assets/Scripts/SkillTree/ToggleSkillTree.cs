@@ -17,6 +17,7 @@ public class ToggleSkillTree : MonoBehaviour
                 statsCanvas.alpha = 0;
                 statsCanvas.blocksRaycasts = false;
                 SkillPanelActive = false;
+
             }
             else
             {

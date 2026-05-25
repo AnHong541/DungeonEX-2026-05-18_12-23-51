@@ -25,6 +25,10 @@ public class EnemyMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+
+       rb.useFullKinematicContacts = true;
+
         ChangeState(EnemyState.Idle);
     }
 
@@ -86,7 +90,7 @@ public class EnemyMovement : MonoBehaviour
                 ChangeState(EnemyState.Chasing);
             }
         }
-        else 
+        else
         {
             rb.linearVelocity = Vector2.zero;
             ChangeState(EnemyState.Idle);
@@ -117,7 +121,7 @@ public class EnemyMovement : MonoBehaviour
             anim.SetBool("isAttacking", true);
         else if (enemyState == EnemyState.Knockback)
             anim.SetBool("isKnockedback", true);
-    }   
+    }
 }
 
 public enum EnemyState

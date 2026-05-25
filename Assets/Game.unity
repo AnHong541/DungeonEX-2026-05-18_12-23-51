@@ -1101,7 +1101,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 100
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.23750001, y: 0.14999998, z: 0}
@@ -6305,7 +6305,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 647774497}
-  - {fileID: 1322467935}
   m_Father: {fileID: 1861641107}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
@@ -11752,7 +11751,7 @@ Transform:
   m_GameObject: {fileID: 1322467934}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1718.3237, y: -1015.6112, z: 0}
+  m_LocalPosition: {x: 3.176259, y: 0.68875873, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11764,7 +11763,7 @@ Transform:
   - {fileID: 2138550284}
   - {fileID: 2076983799}
   - {fileID: 1775759112}
-  m_Father: {fileID: 482204713}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1325467337 stripped
 MonoBehaviour:
@@ -13507,7 +13506,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 100
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -17349,11 +17348,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7359011898193618911, guid: a53f7dfb7895a144e860070f3c060bff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.04
+      value: -9.67
       objectReference: {fileID: 0}
     - target: {fileID: 7359011898193618911, guid: a53f7dfb7895a144e860070f3c060bff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.84
+      value: 8.58
       objectReference: {fileID: 0}
     - target: {fileID: 7359011898193618911, guid: a53f7dfb7895a144e860070f3c060bff, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17888,3 +17887,4 @@ SceneRoots:
   - {fileID: 1899848625}
   - {fileID: 277960460}
   - {fileID: 2025381330}
+  - {fileID: 1322467935}

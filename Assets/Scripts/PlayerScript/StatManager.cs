@@ -109,12 +109,6 @@ public class StatManager : MonoBehaviour
         int newHealth = currentHealth + amount;
         currentHealth = Mathf.Clamp(newHealth, 0, maxHealth);
         UpdateHealthDisplay();
-
-        if (currentHealth <= 0)
-        {
-            Debug.Log("Player died!");
-            
-        }
     }
 
     public void ResetStats()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         if (Input.GetButtonDown("Slash") && player_Combat.enabled == true)
+
         {
             player_Combat.Attack();
         }

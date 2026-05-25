@@ -62,4 +62,18 @@ public class InventoryManager : MonoBehaviour
             }
         }
     }
+
+    public void UseItem(InventorySlot itemSlot)
+    {
+        if (itemSlot.itemSO != null && itemSlot.quantity > 0)
+        {
+            itemSlot.quantity--;
+            if (itemSlot.quantity <= 0)
+            {
+                itemSlot.itemSO = null;
+                itemSlot.quantity = 0;
+            }
+            itemSlot.UpdateUI();
+        }
+    }
 }

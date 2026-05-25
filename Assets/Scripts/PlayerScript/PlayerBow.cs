@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerBow : MonoBehaviour
 {
@@ -27,8 +28,8 @@ public class PlayerBow : MonoBehaviour
     private void Update()
     {
         shootTimer -= Time.deltaTime;
-
         HandleAiming();
+
         if (Input.GetButtonDown("Shoot") && shootTimer <= 0)
         {
             if (inventoryManager.arrow > 0)
