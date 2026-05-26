@@ -16,6 +16,8 @@ MonoBehaviour:
   itemDescription: Live longer
   icon: {fileID: -1358923746260348066, guid: d5e23706ef666aa42b605abd44333247, type: 3}
   isGold: 0
+  isArrow: 0
+  stackSize: 5
   currentHealth: 0
   maxHealth: 5
   damage: 0
