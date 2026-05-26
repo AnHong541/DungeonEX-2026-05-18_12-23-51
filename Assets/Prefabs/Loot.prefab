@@ -91,8 +91,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.03163445, y: 0.0017573833}
-  m_Radius: 0.22759259
+  m_Offset: {x: 0.03625855, y: 0.0012435913}
+  m_Radius: 0.1268911
 --- !u!114 &3979868434702863395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +108,7 @@ MonoBehaviour:
   itemSO: {fileID: 0}
   sr: {fileID: 5028186135480235622}
   anim: {fileID: 3591671545525210440}
+  canBePickUp: 1
   quantity: 5
 --- !u!1 &5257725484108732978
 GameObject:

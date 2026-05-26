@@ -13,6 +13,8 @@ public class InventoryManager : MonoBehaviour
     public TMP_Text goldText;
     public int arrow;
     public TMP_Text arrowText;
+    public GameObject lootPrefab;
+    public Transform player; 
 
 
     private void Start()
@@ -23,6 +25,18 @@ public class InventoryManager : MonoBehaviour
         }
         goldText.text = gold.ToString();
         arrowText.text = arrow.ToString();
+    }
+
+    private void Update()
+    {
+        for (int i = 0; i < itemSlots.Length; i++)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1 + i))
+            {
+                UseItem(itemSlots[i]);
+                break;
+            }
+        }
     }
 
     private void OnEnable()
@@ -49,19 +63,54 @@ public class InventoryManager : MonoBehaviour
             arrowText.text = arrow.ToString();
             return;
         }
-        else
+        foreach (var slot in itemSlots)
         {
-            foreach (var slot in itemSlots)
+            if (quantity <= 0) return;
+
+            if (slot.itemSO == itemSO && slot.quantity < itemSO.stackSize)
             {
-                if (slot.itemSO == null)
-                {
-                    slot.itemSO = itemSO;
-                    slot.quantity = quantity;
-                    slot.UpdateUI();
-                    return;
-                }
+                int availableSpace = itemSO.stackSize - slot.quantity;
+                int amountToAdd = Mathf.Min(availableSpace, quantity);
+                slot.quantity += amountToAdd;
+                quantity -= amountToAdd;
+                slot.UpdateUI();
             }
         }
+        foreach (var slot in itemSlots)
+        {
+            if (quantity <= 0) return;
+
+            if (slot.itemSO == null)
+            {
+                int amountToAdd = Mathf.Min(itemSO.stackSize, quantity);
+                slot.itemSO = itemSO;
+                slot.quantity = amountToAdd;
+                quantity -= amountToAdd;
+                slot.UpdateUI();
+            }
+        }
+        if (quantity > 0)
+        {
+            DropLoot(itemSO, quantity);
+        }
+    }
+
+    public void DropItem(InventorySlot itemSlot)
+    {
+        DropLoot(itemSlot.itemSO, 1);
+        itemSlot.quantity--;
+        if(itemSlot.quantity <= 0)
+        {
+            itemSlot.itemSO = null;
+        }
+        itemSlot.UpdateUI();
+    }
+
+
+    private void DropLoot(ItemSO itemSO, int quantity)
+    {
+        Loot loot = Instantiate(lootPrefab, player.position, Quaternion.identity).GetComponent<Loot>();
+        loot.Initialized(itemSO, quantity);
     }
 
     public void UseItem(InventorySlot itemSlot)

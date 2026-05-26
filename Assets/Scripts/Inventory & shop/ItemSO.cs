@@ -13,6 +13,7 @@ public class ItemSO : ScriptableObject
 
     public bool isGold;
     public bool isArrow;
+    public int stackSize = 10;
 
     [Header("Stats")]
     public int currentHealth;
