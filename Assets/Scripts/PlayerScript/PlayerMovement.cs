@@ -1,9 +1,8 @@
 using System.Collections;
+
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEditor.Tilemaps;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -22,8 +21,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Slash") && player_Combat.enabled == true)
+        // ✅ Chặn toàn bộ input khi dialogue đang mở
+        if (NPC.IsDialogueActive) return;
 
+        if (Input.GetButtonDown("Slash") && player_Combat.enabled == true)
         {
             player_Combat.Attack();
         }
@@ -41,6 +42,15 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        // ✅ Dừng player khi dialogue mở
+        if (NPC.IsDialogueActive)
+        {
+            rb.linearVelocity = Vector2.zero;
+            anim.SetFloat("horizontal", 0);
+            anim.SetFloat("vertical", 0);
+            return;
+        }
+
         if (isKnockback == false && isDashing == false && isAttacking == false)
         {
             float horizontal = Input.GetAxis("Horizontal");

@@ -8,11 +8,11 @@ public class PlayerInteract : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.eKey.wasPressedThisFrame)
+        // ✅ Đổi eKey → bKey
+        if (Keyboard.current.bKey.wasPressedThisFrame)
         {
             if (currentInteractable != null)
             {
-                // Bỏ kiểm tra CanInteract() ở đây
                 currentInteractable.inInteract();
             }
         }

@@ -22,7 +22,7 @@ public class Elevation_Exit : MonoBehaviour
             }
 
             // Trả sorting order về mặc định
-            collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 10;
+            collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 9    ;
         }
     }
 }
