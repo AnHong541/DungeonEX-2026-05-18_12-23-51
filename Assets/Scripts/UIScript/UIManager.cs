@@ -30,9 +30,15 @@ public class UIManager : MonoBehaviour
 
     public void ToggleMenu(CanvasGroup target)
     {
+        if (!isMenuActive)
+        {
+            isMenuActive = true;
+            SetMenuState(menuBar, true);
+            Time.timeScale = 0;
+        }
+
         SetMenuState(statsMenu, false);
         SetMenuState(skillsMenu, false);
-
         SetMenuState(target, true);
     }
 
