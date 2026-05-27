@@ -5,6 +5,7 @@ using TMPro;
 
 public class SkillTreeManager : MonoBehaviour
 {
+
     public SkillSlot[] skillSlots;
     public TMP_Text pointsText;
     public int availablePoints;

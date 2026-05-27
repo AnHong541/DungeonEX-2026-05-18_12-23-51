@@ -1,25 +1,14 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System;
 
 public class ShopManager : MonoBehaviour
 {
-    public static event Action<ShopManager, bool> OnShopStateChanged;
-
-    [SerializeField] private List<ShopItems> shopItems;
-
     [SerializeField] private ShopSlot[] shopSlots;
 
     [SerializeField] private InventoryManager inventoryManager;
 
-    private void Start()
-    {
-        PopularShopItem();
-        OnShopStateChanged?.Invoke(this, true);
-    }
-
-    public void PopularShopItem()
+    public void PopularShopItem(List<ShopItems> shopItems)
     {
         for (int i = 0; i < shopItems.Count && i < shopSlots.Length; i++)
         {
