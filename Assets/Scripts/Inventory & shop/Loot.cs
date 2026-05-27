@@ -43,7 +43,7 @@ public class Loot : MonoBehaviour
         {
             anim.Play("pickup");
             OnitemPickup?.Invoke(itemSO, quantity);
-            Destroy(gameObject, 0.5f);
+            Destroy(gameObject, 0.3f);
         }
     }
 

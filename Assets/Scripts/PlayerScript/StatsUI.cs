@@ -16,25 +16,6 @@ public class StatsUI : MonoBehaviour
         UpdateAllStats();
     }
 
-    private void Update()
-    {
-        if (Input.GetButtonDown("ToggleStats"))
-            if (statsOpen)
-            {
-                Time.timeScale = 1;
-                StatsCanvas.alpha = 0;
-                StatsCanvas.blocksRaycasts = false;
-                statsOpen = false;
-            }
-            else
-            {
-                Time.timeScale = 0;
-                StatsCanvas.alpha = 1;
-                StatsCanvas.blocksRaycasts = true;
-                statsOpen = true;
-            }
-    }
-
     public void UpdateDamage()
     {
         statsSlots[0].GetComponentInChildren<TMP_Text>().text  = "Damage: " + StatManager.Instance.Damage;
