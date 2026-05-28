@@ -45,9 +45,6 @@ public class DungeonClearUI : MonoBehaviour
 
     private void LoadScene(string sceneName)
     {
-        if (!string.IsNullOrEmpty(sceneName))
             SceneManager.LoadScene(sceneName);
-        else
-            Debug.LogWarning("Chưa đặt tên scene!");
     }
 }
