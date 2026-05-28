@@ -1,5 +1,5 @@
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEditor.Tilemaps;
 using UnityEngine;
@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isKnockback;
     private bool isDashing;
     private bool isAttacking;
+    public bool isDead = false;
 
     public PlayerCombat player_Combat;
 
@@ -122,4 +123,23 @@ public class PlayerMovement : MonoBehaviour
     {
         isAttacking = attacking;
     }
+    public void TriggerDeath()
+    {
+        isDead = true;
+
+    
+        rb.linearVelocity = Vector2.zero;
+        rb.bodyType = RigidbodyType2D.Static; 
+
+        Collider2D playerCollider = GetComponent<Collider2D>();
+        if (playerCollider != null) playerCollider.enabled = false;
+
+        anim.SetTrigger("Die");
+
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.Invoke("ShowGameOverScreen", 1.5f);
+        }
+    }
+
 }
