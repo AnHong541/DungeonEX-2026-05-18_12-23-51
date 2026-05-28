@@ -265,7 +265,7 @@ MonoBehaviour:
     m_Bits: 64
   statsUI: {fileID: 0}
   anim: {fileID: 8716280941065344095}
-  cooldown: 1.5
+  cooldown: 1
 --- !u!114 &1230450302162518785
 MonoBehaviour:
   m_ObjectHideFlags: 0
