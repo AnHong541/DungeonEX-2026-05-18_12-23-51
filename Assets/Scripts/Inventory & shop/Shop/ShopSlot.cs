@@ -34,7 +34,8 @@ public class ShopSlot : MonoBehaviour , IPointerEnterHandler, IPointerExitHandle
 
     public void OnButtonClicked()
     {
-        shopManager.TryBuyItem(itemSO, price);
+        if (itemSO != null)
+            shopManager.TryBuyItem(itemSO, price);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -45,7 +46,10 @@ public class ShopSlot : MonoBehaviour , IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        shopInfo.HideItemInfo();
+        if (itemSO != null)
+        {
+            shopInfo.HideItemInfo();
+        }
     }
 
     public void OnPointerMove(PointerEventData eventData)
