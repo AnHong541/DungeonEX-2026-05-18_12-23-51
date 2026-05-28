@@ -41401,7 +41401,7 @@ PolygonCollider2D:
       - {x: -9.861468, y: -24.192211}
       - {x: -9.688783, y: -46.230423}
       - {x: -8.814756, y: -60.166077}
-      - {x: -8.124646, y: -63.614944}
+      - {x: -8.068987, y: -62.44609}
       - {x: -1.5989246, y: -62.685234}
       - {x: 4.854, y: -63.23883}
       - {x: 7.2277107, y: -64.71855}
@@ -48511,7 +48511,11 @@ Tilemap:
       - {fileID: -4506065253989712803, guid: 8816f62ddaf6e24419456aba072f512d, type: 3}
       - {fileID: -146199373820657052, guid: 0dd78ca954cf8fe41aedad44f0e042c8, type: 3}
       - {fileID: -6514142175908166047, guid: 9ab37bbdd52478b4d9b5102c0449f332, type: 3}
+<<<<<<< Updated upstream
       m_AnimationSpeed: 1.933622
+=======
+      m_AnimationSpeed: 1.6869426
+>>>>>>> Stashed changes
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 7, y: -2, z: 0}
@@ -48522,7 +48526,11 @@ Tilemap:
       - {fileID: -4506065253989712803, guid: 8816f62ddaf6e24419456aba072f512d, type: 3}
       - {fileID: -146199373820657052, guid: 0dd78ca954cf8fe41aedad44f0e042c8, type: 3}
       - {fileID: -6514142175908166047, guid: 9ab37bbdd52478b4d9b5102c0449f332, type: 3}
+<<<<<<< Updated upstream
       m_AnimationSpeed: 1.8724146
+=======
+      m_AnimationSpeed: 1.6197388
+>>>>>>> Stashed changes
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -8, y: 5, z: 0}
@@ -48533,7 +48541,11 @@ Tilemap:
       - {fileID: -4506065253989712803, guid: 8816f62ddaf6e24419456aba072f512d, type: 3}
       - {fileID: -146199373820657052, guid: 0dd78ca954cf8fe41aedad44f0e042c8, type: 3}
       - {fileID: -6514142175908166047, guid: 9ab37bbdd52478b4d9b5102c0449f332, type: 3}
+<<<<<<< Updated upstream
       m_AnimationSpeed: 2.1640682
+=======
+      m_AnimationSpeed: 1.949639
+>>>>>>> Stashed changes
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 7, y: 5, z: 0}
@@ -48544,7 +48556,11 @@ Tilemap:
       - {fileID: -4506065253989712803, guid: 8816f62ddaf6e24419456aba072f512d, type: 3}
       - {fileID: -146199373820657052, guid: 0dd78ca954cf8fe41aedad44f0e042c8, type: 3}
       - {fileID: -6514142175908166047, guid: 9ab37bbdd52478b4d9b5102c0449f332, type: 3}
+<<<<<<< Updated upstream
       m_AnimationSpeed: 1.7555542
+=======
+      m_AnimationSpeed: 1.6778879
+>>>>>>> Stashed changes
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
