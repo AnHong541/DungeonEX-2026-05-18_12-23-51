@@ -48792,7 +48792,7 @@ Tilemap:
       - {fileID: -4506065253989712803, guid: 8816f62ddaf6e24419456aba072f512d, type: 3}
       - {fileID: -146199373820657052, guid: 0dd78ca954cf8fe41aedad44f0e042c8, type: 3}
       - {fileID: -6514142175908166047, guid: 9ab37bbdd52478b4d9b5102c0449f332, type: 3}
-      m_AnimationSpeed: 2.1664827
+      m_AnimationSpeed: 2.0781014
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 7, y: -2, z: 0}
@@ -48803,7 +48803,7 @@ Tilemap:
       - {fileID: -4506065253989712803, guid: 8816f62ddaf6e24419456aba072f512d, type: 3}
       - {fileID: -146199373820657052, guid: 0dd78ca954cf8fe41aedad44f0e042c8, type: 3}
       - {fileID: -6514142175908166047, guid: 9ab37bbdd52478b4d9b5102c0449f332, type: 3}
-      m_AnimationSpeed: 1.7920609
+      m_AnimationSpeed: 1.9074187
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -8, y: 5, z: 0}
@@ -48814,7 +48814,7 @@ Tilemap:
       - {fileID: -4506065253989712803, guid: 8816f62ddaf6e24419456aba072f512d, type: 3}
       - {fileID: -146199373820657052, guid: 0dd78ca954cf8fe41aedad44f0e042c8, type: 3}
       - {fileID: -6514142175908166047, guid: 9ab37bbdd52478b4d9b5102c0449f332, type: 3}
-      m_AnimationSpeed: 2.1374738
+      m_AnimationSpeed: 1.7699938
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 7, y: 5, z: 0}
@@ -48825,7 +48825,7 @@ Tilemap:
       - {fileID: -4506065253989712803, guid: 8816f62ddaf6e24419456aba072f512d, type: 3}
       - {fileID: -146199373820657052, guid: 0dd78ca954cf8fe41aedad44f0e042c8, type: 3}
       - {fileID: -6514142175908166047, guid: 9ab37bbdd52478b4d9b5102c0449f332, type: 3}
-      m_AnimationSpeed: 1.7283964
+      m_AnimationSpeed: 1.9294707
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -49031,7 +49031,7 @@ PrefabInstance:
       objectReference: {fileID: 240248739}
     - target: {fileID: 5201438791064542131, guid: a6b21a7ace8fff54081994a965989502, type: 3}
       propertyPath: enemyLayer.m_Bits
-      value: 0
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 7591896014081531626, guid: a6b21a7ace8fff54081994a965989502, type: 3}
       propertyPath: healthText
