@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class Elvetion_entry : MonoBehaviour
 {
     public Collider2D[] mountainColliders;
     public Collider2D[] boundaryColliders;
@@ -16,7 +16,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
             }
 
             // Bật collider boundary
-            foreach (Collider2D boundary in boundaryColliders)
+            foreach (Collider2D boundary in boundaryColliders) 
             {
                 boundary.enabled = true;
             }

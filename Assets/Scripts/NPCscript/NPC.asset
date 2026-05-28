@@ -13,14 +13,12 @@ MonoBehaviour:
   m_Name: NPC
   m_EditorClassIdentifier: Assembly-CSharp::QuesionData
   tenQuest: NhiemVu1
-  npcName: An Gay Gay
+  npcName: "TH\u1EB0NG AN"
   npcPortrait: {fileID: -5037213432470831748, guid: 5618ce276b4fbba4fa6d73bf23e163ab, type: 3}
   dialogueLines:
-  - "M\u1EB9 M\xE0y Tao l\xE0 Vua Th\u1EBF Gi\u1EDBi N\xE0y Con M\u1EB9 MAYYYYYYYYYYYYYYY"
-  - GayGay Gayyyyyyyyyyy
-  - "\xC0 tao c\xF3 m\u1ED9t nhi\u1EC7m v\u1EE5 cho m\xE0y"
-  - "\u1EDE ph\xEDa nam c\xF3 1 dungeon "
-  - "\u0111\xF3 c\xF3 m\u1ED9t con BOSS t\xEAn l\xE0 KIDKID m\u1ED3m n\xF3 ch\u1EC9
-    spam KID v\u1EDBi b\u1ECDn KID th\xF4i \u0111\u1EEBng \u0111\u1EC3 n\xF3 l\xE0m
-    m\u1EA5t \xFD ch\xED "
+  - HALO HALO
+  - SKIBIDI TU TU SHIT SHIT
+  - "Ta c\xF3 m\u1ED9t nhi\u1EC7m v\u1EE5 cho m\xE0y n\xE8"
+  - "\u1EDE ph\xEDa nam c\xF3 m\u1ED9t hang \u0111\u1ED9ng"
+  - "H\xE3y v\xE0o \u0111\xF3 v\xE0 ti\xEAu di\u1EC7t h\u1EA7m ng\u1EE5c \u0111\u1EA5y"
   typingSpeed: 0.05

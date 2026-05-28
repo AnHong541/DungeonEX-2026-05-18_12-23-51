@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Persistent Data")]
     public GameObject[] persistentObject;
-
+ 
 
    private void Awake()
    {
