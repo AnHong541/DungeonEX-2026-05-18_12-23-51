@@ -23043,6 +23043,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Confiner
       objectReference: {fileID: 0}
+    - target: {fileID: 3299813068909349745, guid: 8763ddf8db7d994429ab1fc2e3895e60, type: 3}
+      propertyPath: m_TagString
+      value: Confiner
+      objectReference: {fileID: 0}
     - target: {fileID: 7840822148415822389, guid: 8763ddf8db7d994429ab1fc2e3895e60, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.18593
