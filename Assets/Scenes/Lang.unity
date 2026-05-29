@@ -1150,7 +1150,7 @@ PrefabInstance:
     - target: {fileID: 1230450302162518785, guid: a6b21a7ace8fff54081994a965989502, type: 3}
       propertyPath: inventoryManager
       value: 
-      objectReference: {fileID: 2058283031}
+      objectReference: {fileID: 0}
     - target: {fileID: 2676736735599507732, guid: a6b21a7ace8fff54081994a965989502, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.03
@@ -13675,7 +13675,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1981075264025529357, guid: ccb2c71b770f5b344b58643c7bf71f66, type: 3}
       propertyPath: m_SortingOrder
-      value: 101
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2008847008228934274, guid: ccb2c71b770f5b344b58643c7bf71f66, type: 3}
       propertyPath: damage
@@ -17122,6 +17122,103 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1001 &1240512582
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506235851109774287, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8641896385484888143, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
+      propertyPath: m_Name
+      value: InventoryCanvas
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba2549e50458fda479c534fd0b87943a, type: 3}
 --- !u!1 &1269309749
 GameObject:
   m_ObjectHideFlags: 0
@@ -20795,7 +20892,7 @@ PrefabInstance:
     - target: {fileID: 3667815889746248189, guid: 48f5b571eb06ef34aad15725305bb0cb, type: 3}
       propertyPath: inventoryManager
       value: 
-      objectReference: {fileID: 2058283031}
+      objectReference: {fileID: 0}
     - target: {fileID: 4142214920526855893, guid: 48f5b571eb06ef34aad15725305bb0cb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -23923,17 +24020,6 @@ Sprite:
   m_Bones: []
   m_ScriptableObjects: []
   m_SpriteID: 
---- !u!114 &2058283031 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9042454792382506747, guid: ccb2c71b770f5b344b58643c7bf71f66, type: 3}
-  m_PrefabInstance: {fileID: 1060836359}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52e1cfa16b509de42881e62a6f59b37f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
 --- !u!1 &2067408393
 GameObject:
   m_ObjectHideFlags: 0
@@ -24444,6 +24530,7 @@ SceneRoots:
   - {fileID: 1609325474}
   - {fileID: 1060836359}
   - {fileID: 1742456813}
+  - {fileID: 1240512582}
   - {fileID: 293789730}
   - {fileID: 157571739}
   - {fileID: 761991528}
