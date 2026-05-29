@@ -13675,7 +13675,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1981075264025529357, guid: ccb2c71b770f5b344b58643c7bf71f66, type: 3}
       propertyPath: m_SortingOrder
-      value: 4
+      value: 101
       objectReference: {fileID: 0}
     - target: {fileID: 2008847008228934274, guid: ccb2c71b770f5b344b58643c7bf71f66, type: 3}
       propertyPath: damage
@@ -13943,7 +13943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6464189744155722388, guid: ccb2c71b770f5b344b58643c7bf71f66, type: 3}
       propertyPath: m_SortingOrder
-      value: 4
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6476384424174699002, guid: ccb2c71b770f5b344b58643c7bf71f66, type: 3}
       propertyPath: m_AnchorMax.y
@@ -17216,7 +17216,7 @@ MonoBehaviour:
   senceToLoad: map1
   fadeAnim: {fileID: 2080908565}
   fadeTime: 1
-  newPlayerPosition: {x: 0.39, y: -1.4}
+  newPlayerPosition: {x: 5.5, y: -69.8}
 --- !u!114 &1285516119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20566,7 +20566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1405822515765968700, guid: 48f5b571eb06ef34aad15725305bb0cb, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 2034314647201570532, guid: 48f5b571eb06ef34aad15725305bb0cb, type: 3}
       propertyPath: m_AnchorMax.y
