@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 1569947084571813033}
   - component: {fileID: 7727027907998803003}
   - component: {fileID: 20495370090486178}
+  - component: {fileID: 3199557113033041474}
   m_Layer: 0
   m_Name: Player CM Vcam 1
   m_TagString: Untagged
@@ -201,10 +202,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachineConfiner2D
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 6971533832099795312, guid: 8763ddf8db7d994429ab1fc2e3895e60, type: 3}
   m_Damping: 0.5
   m_MaxWindowSize: -1
   m_Padding: 0
+--- !u!114 &3199557113033041474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157480180288458363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e216562b54556449e1c01fa7835b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConfinerFinder
 --- !u!1 &6118588944400432955
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +280,7 @@ Transform:
   m_GameObject: {fileID: 8459173688524802902}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.35176, y: 1.9583001, z: -10}
+  m_LocalPosition: {x: 0.62824, y: -2.7017, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -442,7 +455,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 128
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 58254f564f972da46b4841f91ea15473, type: 2}
   m_TargetDisplay: 0

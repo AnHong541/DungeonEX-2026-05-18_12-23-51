@@ -341,7 +341,7 @@ MonoBehaviour:
   expReward: 3
   currentHealth: 15
   maxHealth: 5
-  anim: {fileID: 0}
+  anim: {fileID: 5892323380484925165}
 --- !u!114 &4453203208779519525
 MonoBehaviour:
   m_ObjectHideFlags: 0
