@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
-using UnityEditor.Tilemaps;
+
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
