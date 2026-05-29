@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
    {
        if (instance != null)
        {
-            CleanUpAndDestroy();
-           return;
+           CleanUpAndDestroy();
+            return;
         }
        else
        {
