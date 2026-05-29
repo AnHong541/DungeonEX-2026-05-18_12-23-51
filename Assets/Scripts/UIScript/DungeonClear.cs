@@ -38,6 +38,7 @@ public class DungeonClearUI : MonoBehaviour
 
     private void ShowDungeonClear()
     {
+        Time.timeScale = 0;
         dungeonClearPanel.alpha = 1;
         dungeonClearPanel.interactable = true;
         dungeonClearPanel.blocksRaycasts = true;
@@ -45,6 +46,7 @@ public class DungeonClearUI : MonoBehaviour
 
     private void LoadScene(string sceneName)
     {
-            SceneManager.LoadScene(sceneName);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(sceneName);
     }
 }
